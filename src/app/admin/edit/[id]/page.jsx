@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -79,6 +80,9 @@ const EditPage = ({ params }) => {
       }}
     >
       <div className="p-10 w-screen bg-white shadow-md rounded-lg">
+        <Link href="/">
+          <button className="btn size-120 glass">HOME </button>
+        </Link>
         <h2 className="text-3xl font-bold text-gray-900 text-center">
           Input Form
         </h2>

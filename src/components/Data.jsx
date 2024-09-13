@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import Link from "next/link";
 
 const Data = () => {
   const [data, setData] = useState([]); // Use `data` and `setData` for state management
@@ -31,6 +32,10 @@ const Data = () => {
         <h1 className="text-4xl font-extrabold text-gray-800 mb-4">
           Data Shown Here
         </h1>
+        <Link href="./admin/dashboard">
+          <button className="btn glass">ADMIN-DASHBOARD</button>
+        </Link>
+
         <p className="text-lg text-gray-600">
           This is where you will display the fetched data in a beautiful way.
         </p>

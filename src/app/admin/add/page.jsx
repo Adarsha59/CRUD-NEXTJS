@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
@@ -40,6 +42,9 @@ const FormInputs = () => {
       }}
     >
       <div className=" p-10 w-screen bg-white shadow-md rounded-lg">
+        <Link href="/">
+          <button className="btn size-120 glass">HOME </button>
+        </Link>
         <h2
           className="text-3xl font-bold text-gray-900  text-center"
           style={{

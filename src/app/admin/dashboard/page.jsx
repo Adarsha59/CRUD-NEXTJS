@@ -41,7 +41,11 @@ const AdminPanel = () => {
       {/* Header */}
       <header className="flex justify-between items-center bg-white shadow-md py-4 px-6 rounded-lg mb-8">
         <h1 className="text-4xl font-extrabold text-gray-800 tracking-tight">
-          Admin Panel
+          <Link href="/">
+            <button className="btn size-120 glass">
+              ADMIN-DASHBOARD || HOME{" "}
+            </button>
+          </Link>
         </h1>
         <nav>
           <a
