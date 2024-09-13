@@ -22,7 +22,20 @@ const AdminPanel = () => {
 
     fetchData();
   }, []);
-
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`/api/delete/${id}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) {
+        throw new Error("Failed to delete item");
+      }
+      // Remove item from local state
+      setData(items.filter((item) => item._id !== id));
+    } catch (error) {
+      console.error("Failed to delete item:", error);
+    }
+  };
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       {/* Header */}
@@ -82,8 +95,10 @@ const AdminPanel = () => {
                         Edit
                       </button>
                     </Link>
-
-                    <button className="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-md font-semibold shadow-lg transition duration-200">
+                    <button
+                      onClick={() => handleDelete(item._id)}
+                      className="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded-md font-semibold shadow-lg transition duration-200"
+                    >
                       Remove
                     </button>
                   </div>
