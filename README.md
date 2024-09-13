@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CRUD Operations with Next.js 14
+
+================================
+
+## Project Overview
+
+This project is a basic implementation of CRUD (Create, Read, Update, Delete) operations using Next.js 14. The project is developed by Adarsha Paudyal.
+
+## Features
+
+### Create
+
+- Create new data entries
+
+### Read
+
+- Retrieve and display existing data entries
+
+### Update
+
+- Update existing data entries
+
+### Delete
+
+- Delete existing data entries
+
+## Technologies Used
+
+- Next.js 14
+- [Add any other technologies used, e.g. database, CSS framework, etc.]
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository: `git clone https://github.com/Adarsha59/CRUD-NEXTJS.git`
+2. Install dependencies: `npm install` or `yarn install`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Application
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Start the development server: `npm run dev` or `yarn dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Create
 
-## Learn More
+- `POST /api/data`
 
-To learn more about Next.js, take a look at the following resources:
+### Read
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /api/data`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Update
 
-## Deploy on Vercel
+- `PATCH /api/data/:id`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Delete
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `DELETE /api/data/:id`
+
+## Note
+
+This is a basic implementation of CRUD operations and may require additional features and security measures for a production-ready application.
+
+## Contributing
+
+If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Author
+
+Adarsha Paudyal
