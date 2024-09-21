@@ -1,12 +1,14 @@
+import Image from "next/image";
 import React from "react";
-
 const Card = ({ title, description, price }) => {
   return (
     <>
       <div className="card bg-base-100 w-96 shadow-xl">
         <figure>
-          <img
+          <Image
             src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            fill
+            style={{ objectFit: "cover" }}
             alt="Shoes"
           />
         </figure>

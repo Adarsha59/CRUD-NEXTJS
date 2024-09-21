@@ -21,7 +21,9 @@ const EditPage = ({ params }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/read`);
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_URL}/api/read`
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -47,11 +49,14 @@ const EditPage = ({ params }) => {
 
   const onSubmit = async (data) => {
     try {
-      const api = await fetch(`http://localhost:3000/api/update/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const api = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/update/${id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
       const apiResponse = await api.json();
       stateData(apiResponse);
       router.push("/admin/dashboard");

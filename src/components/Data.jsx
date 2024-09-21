@@ -10,7 +10,9 @@ const Data = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/read");
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_URL}/api/read`
+        );
         if (!response.ok) {
           // Check if the response is OK
           throw new Error("Failed to fetch data");

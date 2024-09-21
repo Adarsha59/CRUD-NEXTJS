@@ -17,11 +17,14 @@ const FormInputs = () => {
 
   const onSubmit = async (data) => {
     try {
-      const api = await fetch("http://localhost:3000/api/create", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const api = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/create`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        }
+      );
       const apiResponse = await api.json();
       stateData(apiResponse);
       router.push("/admin/dashboard");
